@@ -73,6 +73,4 @@ public class BookService {
         List<Book> books = bookRepository.findByIsbn(isbn);
         return new ResponseEntity<>(books, HttpStatus.OK);
     }
-
-
 }

@@ -28,7 +28,6 @@ public class Book {
     private String title;
 
     @ManyToOne
-//    @JsonBackReference
     @JsonIgnoreProperties({"books"})
     @JoinColumn(name = "author_id", nullable = false)
     private Author author;

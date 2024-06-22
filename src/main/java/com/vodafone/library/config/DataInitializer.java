@@ -10,6 +10,7 @@ import com.vodafone.library.repository.BorrowingRecordRepository;
 import com.vodafone.library.repository.CustomerRepository;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,16 +18,17 @@ import org.springframework.context.annotation.Configuration;
 import java.time.LocalDate;
 
 @Configuration
+@RequiredArgsConstructor
 public class DataInitializer {
 
-    @Autowired
-    private AuthorRepository authorRepository;
-    @Autowired
-    private BookRepository bookRepository;
-    @Autowired
-    private BorrowingRecordRepository borrowingRecordRepository;
-    @Autowired
-    private CustomerRepository customerRepository;
+//    @Autowired
+    private final AuthorRepository authorRepository;
+//    @Autowired
+    private final BookRepository bookRepository;
+//    @Autowired
+    private final BorrowingRecordRepository borrowingRecordRepository;
+//    @Autowired
+    private final CustomerRepository customerRepository;
 
     @Bean
     public int initDummyData() {
